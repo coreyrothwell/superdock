@@ -13,6 +13,7 @@
 	      'initial': false
 	    }, opts),
 	    	item = this,
+	    	itemHeight = item.height(),
 
 	    	// test function to check for position fixed. FROM: http://kangax.github.com/cft/#IS_POSITION_FIXED_SUPPORTED
 	    	test = function (){
@@ -56,7 +57,7 @@
 
 					item.css({
 						'position': 'absolute',
-						'top': ( window.innerHeight - 50 + $(window).scrollTop() ) + 'px',
+						'top': ( window.innerHeight - itemHeight + $(window).scrollTop() ) + 'px',
 						'left': '0'
 					});
 
