@@ -1,4 +1,6 @@
 superdock
 =========
 
-A Simple jQuery plug-in to check if position: fixed works. If not, it will fix a div to the bottom of the page. v0.1
+A Simple jQuery plug-in to check if position: fixed works. If not, it will fix an element to the bottom of the page. v0.1.
+
+Great for sticky bottom navigation on older browsers (old iPod).
