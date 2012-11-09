@@ -13,7 +13,7 @@
 	      'initial': false
 	    }, opts),
 	    	item = this,
-	    	itemHeight = item.height(),
+	    	itemHeight = item.outerHeight(),
 
 	    	// test function to check for position fixed. FROM: http://kangax.github.com/cft/#IS_POSITION_FIXED_SUPPORTED
 	    	test = function (){
@@ -46,6 +46,7 @@
 				  return null;
 				};
 
+				
 
 
 		if(!test()){
@@ -54,12 +55,21 @@
 
 		    		
 				$(window).scroll(function(){
+					var pos;
+
+					if(settings.location === 'bottom'){ 
+						pos = ( window.innerHeight - itemHeight + $(window).scrollTop() ) + 'px';
+					} else if(settings.location === 'top') {
+						pos = ( $(window).scrollTop() ) + 'px';
+					}
+
 
 					item.css({
 						'position': 'absolute',
-						'top': ( window.innerHeight - itemHeight + $(window).scrollTop() ) + 'px',
+						'top': pos,
 						'left': '0'
 					});
+
 
 				});
 

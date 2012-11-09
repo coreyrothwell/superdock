@@ -19,17 +19,24 @@ div {
 	padding-top: 15px;
 	text-align: center;
 	position: fixed;
+	left: 0;
+}
+.superdock {
+	top: 0;
+}
+.superdock2 {
 	bottom: 0;
-	left: 0; 
 }
 </style>
 </head>
 <body>
-<div class="superdock">Hi! Im Stuck!</div>
+<div class="superdock">Hi! Im Stuck to the top!</div>
+<div class="superdock2">Hi! Im Stuck to the bottom!</div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script src="jquery.superdock.js"></script>
+<script src="jquery.superdock.min.js"></script>
 <script>
-$('.superdock').superDock();
+$('.superdock').superDock({'location':'top'});
+$('.superdock2').superDock({'location':'bottom'});
 </script>
 </body>
 </html>
